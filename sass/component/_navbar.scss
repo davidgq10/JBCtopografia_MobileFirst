@@ -1,0 +1,8 @@
+.navbar {
+    background: var(--c-grey-dark-1);
+    color: var(--c-grey-light-1);
+
+    &__item {
+        display: inline;
+    }
+}
