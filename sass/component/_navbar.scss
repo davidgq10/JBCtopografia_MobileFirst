@@ -1,8 +1,82 @@
-.navbar {
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
     background: var(--c-grey-dark-1);
     color: var(--c-grey-light-1);
+    padding: .5rem 2rem;
 
-    &__item {
-        display: inline;
+
+    &__brand {
+        height: 4rem;
+        width: auto;
+        transform: translateY(-.5rem);
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: none;
+        text-align: center;
+        cursor: pointer;
+    }
+
+
+    //ICON
+    &__icon {
+        position: relative;
+        margin-top: 2rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: var(--c-grey-light-1);
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    //On hover the lines expand 1rem
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    //On checked change their position for made a X
+    &__checkbox:checked+&__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked+&__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
     }
 }

@@ -1,7 +1,8 @@
-@import "base";
+@import "base/base";
 @import "animation";
-@import "typography";
+@import "base/typography";
 @import "variable";
 @import "component/button";
 @import "component/card";
-@import "component/navbar"
+@import "component/navbar";
+@import "layout/home";

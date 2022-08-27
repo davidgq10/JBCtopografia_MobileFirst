@@ -15,12 +15,18 @@ html {
 }
 
 body {
-    // font-family: 'Open Sans', sans-serif;
-    // font-weight: 400;
-    // line-height: 1.6;
-    // c: var(--c-grey-dark-2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--c-grey-dark-2);
     background-image: linear-gradient(to right bottom, var(--c-primary-light), var(--c-primary-dark));
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
+
+    background-image: url('../../img/imgRuta32.jpg');
+    background-position: top right;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }
