@@ -23,11 +23,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  background-image: url("../../img/imgRuta32.jpg");
-  background-position: top right;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 
 @keyframes moveInBottom {
@@ -192,6 +187,11 @@ body {
 }
 
 .main {
+  background-image: url("../../img/imgRuta32.jpg");
+  background-position: center right;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -215,6 +215,9 @@ body {
   color: var(--c-grey-light-1);
 }
 .main__banner {
+  width: 100%;
+  max-width: 80rem;
+  align-self: center;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 1.5rem;
   padding: 2rem;
@@ -231,13 +234,20 @@ body {
 }
 
 .service {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
   padding: 4rem 2rem 4rem 2rem;
   background-color: var(--c-grey-light-2);
   justify-content: center;
+  gap: 2rem;
 }
 .service__card {
-  display: flex;
+  min-width: 30rem;
+  max-width: 40rem;
   flex-direction: column;
+  flex: 2rem;
+  display: flex;
   justify-content: center;
   align-items: center;
   border: 1px var(--c-grey-light-4);
