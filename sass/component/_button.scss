@@ -7,7 +7,7 @@
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
-        padding: 1.5rem 3rem;
+        padding: 1.5rem 2rem;
         display: inline-block;
         border-radius: 10rem;
         transition: all .2s;
@@ -37,12 +37,32 @@
     }
 
     &--white {
-        background-color: var(--c-primary-dark);
-        color: var(--c-grey-light-1);
+        background-color: var(--c-primary-light);
+        color: var(--c-grey-dark-1);
 
         &::after {
             background-color: var(--c-grey-light-1);
         }
+    }
+
+    &--yellow {
+        background-color: var(--c-yellow-light-1);
+        color: var(--c-grey-dark-1);
+
+        &::after {
+            background-color: var(--c-yellow-light-1);
+        }
+    }
+
+    &--transparent {
+        background-color: transparent;
+        border: 2px solid var(--c-primary-dark);
+        color: var(--c-primary-dark);
+
+        &::after {
+            background-color: var(--c-primary);
+        }
+
     }
 
 
@@ -70,7 +90,7 @@
 
     &:link,
     &:visited {
-        font-size: var(--c-grey-light-1);
+        //font-size: var(--c-grey-light-1);
         color: var(--c-grey-dark-1);
         display: inline-block;
         text-decoration: none;
@@ -80,7 +100,7 @@
     }
 
     &:hover {
-        background-color: var(--c-primary);
+        background-color: var(--c-primary-light);
         color: var(--c-grey-light-1);
         box-shadow: 0 1rem 2rem rgba(var(--c-grey-dark-1), .15);
         transform: translateY(-2px);

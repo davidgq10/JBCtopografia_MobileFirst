@@ -1,0 +1,39 @@
+.footer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 16vh;
+    background: var(--c-grey-dark-1);
+    color: var(--c-grey-light-1);
+    padding: .5rem 2rem;
+}
+
+.contact {
+
+    border-radius: 1rem;
+    justify-content: center;
+
+    &__title {
+        font-size: 2rem;
+
+    }
+
+
+    &__icon {
+        margin: .5rem;
+        border-radius: 50%;
+
+    }
+}
+
+.legal-advisor {
+    &__brand-name {
+        font-size: 1rem;
+
+        &>span {
+            font-size: 1rem;
+        }
+    }
+
+}

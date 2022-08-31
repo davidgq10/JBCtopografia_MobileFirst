@@ -15,13 +15,10 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: var(--c-grey-dark-2);
-  background-image: linear-gradient(to right bottom, var(--c-primary-light), var(--c-primary-dark));
-  background-size: cover;
-  background-repeat: no-repeat;
   min-height: 100vh;
 }
 
@@ -36,9 +33,10 @@ body {
   }
 }
 :root {
-  --c-primary: #66e57d;
-  --c-primary-light: #99fca3;
-  --c-primary-dark: #286c33;
+  --c-primary: #39ab35;
+  --c-primary-light: #63fa72;
+  --c-primary-dark: #1f602a;
+  --c-yellow-light-1: yellow;
   --c-grey-light-1: #faf9f9;
   --c-grey-light-2: #efefef;
   --c-grey-light-3: #d2d2d2;
@@ -58,7 +56,7 @@ body {
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 2rem;
   display: inline-block;
   border-radius: 10rem;
   transition: all 0.2s;
@@ -81,11 +79,26 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(var(--c-grey-dark-1), 0.2);
 }
 .btn--white {
-  background-color: var(--c-primary-dark);
-  color: var(--c-grey-light-1);
+  background-color: var(--c-primary-light);
+  color: var(--c-grey-dark-1);
 }
 .btn--white::after {
   background-color: var(--c-grey-light-1);
+}
+.btn--yellow {
+  background-color: var(--c-yellow-light-1);
+  color: var(--c-grey-dark-1);
+}
+.btn--yellow::after {
+  background-color: var(--c-yellow-light-1);
+}
+.btn--transparent {
+  background-color: transparent;
+  border: 2px solid var(--c-primary-dark);
+  color: var(--c-primary-dark);
+}
+.btn--transparent::after {
+  background-color: var(--c-primary);
 }
 .btn::after {
   content: "";
@@ -105,7 +118,6 @@ body {
 }
 
 .btn-text:link, .btn-text:visited {
-  font-size: var(--c-grey-light-1);
   color: var(--c-grey-dark-1);
   display: inline-block;
   text-decoration: none;
@@ -114,7 +126,7 @@ body {
   transition: all 0.2s;
 }
 .btn-text:hover {
-  background-color: var(--c-primary);
+  background-color: var(--c-primary-light);
   color: var(--c-grey-light-1);
   box-shadow: 0 1rem 2rem rgba(var(--c-grey-dark-1), 0.15);
   transform: translateY(-2px);
@@ -186,6 +198,35 @@ body {
   transform: rotate(-135deg);
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 16vh;
+  background: var(--c-grey-dark-1);
+  color: var(--c-grey-light-1);
+  padding: 0.5rem 2rem;
+}
+
+.contact {
+  border-radius: 1rem;
+  justify-content: center;
+}
+.contact__title {
+  font-size: 2rem;
+}
+.contact__icon {
+  margin: 0.5rem;
+  border-radius: 50%;
+}
+
+.legal-advisor__brand-name {
+  font-size: 1rem;
+}
+.legal-advisor__brand-name > span {
+  font-size: 1rem;
+}
+
 .main {
   background-image: url("../../img/imgRuta32.jpg");
   background-position: center right;
@@ -204,11 +245,6 @@ body {
   flex-direction: column;
   align-self: flex-start;
 }
-.main__img {
-  height: 4rem;
-  width: 5rem;
-  align-self: center;
-}
 .main__title {
   font-size: 1rem;
   color: var(--c-grey-light-1);
@@ -220,27 +256,25 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 1.5rem;
   padding: 2rem;
-  margin-bottom: 7rem;
+  margin-bottom: 7vh;
 }
 .main__text {
-  padding: 1rem 3rem 2rem rem;
-  font-size: 1.7rem;
+  padding: 1rem 3rem 3rem 3rem;
+  font-size: 2rem;
   color: var(--c-grey-light-2);
 }
 .main__brand {
-  height: 14rem;
+  height: 18rem;
   width: auto;
+  transform: translateX(1rem);
 }
 
 .service {
-  background: linear-gradient(to right, white, rgb(255, 255, 255), rgb(228, 228, 228));
-  background-position: center 0;
-  background-size: cover;
+  background-color: white;
   max-width: 100vw;
   display: flex;
   flex-wrap: wrap;
   padding: 10rem 2rem 4rem 2rem;
-  background-color: var(--c-grey-light-2);
   justify-content: center;
   gap: 3rem;
 }
@@ -274,10 +308,11 @@ body {
 }
 .service__text {
   font-size: 1.7rem;
+  font-weight: 300;
   text-align: justify;
   margin-bottom: 1rem;
   margin: 0 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .service__button {
   justify-self: center;
